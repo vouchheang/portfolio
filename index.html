@@ -1,576 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css//main.css" />
     <title>Developer Portfolio</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: system-ui, -apple-system, sans-serif;
-      }
-
-      body {
-        background: linear-gradient(to bottom, #1a1424, #0c0a13);
-        color: white;
-        min-height: 100vh;
-        overflow-x: hidden;
-      }
-
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1.5rem 4rem;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 100;
-        transition: background-color 0.3s ease-in-out;
-      }
-
-      nav:hover {
-        background-color: rgba(0, 0, 0, 0.7);
-      }
-
-      .logo {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #a855f7;
-        transition: color 0.3s ease-in-out;
-      }
-
-      .logo:hover {
-        color: #ffffff;
-      }
-
-      .nav-links {
-        display: flex;
-        gap: 2rem;
-      }
-
-      .nav-links a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: color 0.3s ease-in-out;
-      }
-
-      .nav-links a:hover {
-        color: #a855f7;
-      }
-
-      .hero {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 6rem 4rem 4rem;
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        animation: fadeIn 2s ease-out;
-      }
-
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-
-      .hero-image {
-        position: relative;
-        width: 60%;
-        transform: translateY(0);
-        animation: float 4s ease-in-out infinite;
-      }
-
-      @keyframes float {
-        0% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
-
-      .hero-image img {
-        width: 100%;
-        height: auto;
-        border-radius: 24px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-      }
-
-      .hello-text {
-        position: absolute;
-        top: -40px;
-        right: 100px;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        color: #a855f7;
-      }
-
-      .hero-content {
-        max-width: 1000px;
-      }
-
-      .developer-intro {
-        font-size: 1.3rem;
-        text-decoration: underline;
-        margin-bottom: 1rem;
-        opacity: 0;
-        animation: fadeInText 1.5s ease-out 1s forwards;
-      }
-
-      .main-heading {
-        font-size: 4rem;
-        line-height: 1.2;
-        margin-bottom: 1rem;
-        letter-spacing: 1px;
-        font-weight: 600;
-        color: #ffffff;
-        animation: fadeInText 1.5s ease-out 1.2s forwards;
-      }
-
-      .passion-text {
-        color: #a855f7;
-        padding: 0.3rem 1.2rem;
-        border: 2px solid #dad6de;
-        border-radius: 50%;
-        display: inline-block;
-        font-weight: 600;
-      }
-
-      .subtitle {
-        color: #94a3b8;
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-        animation: fadeInText 1.5s ease-out 1.4s forwards;
-      }
-
-      @keyframes fadeInText {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-
-      /* New section below the image with large text */
-      .aspiring-dev {
-        font-size: 3rem;
-        color: #a855f7;
-        /* text-align: center; */
-        animation: fadeInText 1.5s ease-out 1.6s forwards;
-      }
-
-      .description {
-        color: #94a3b8;
-        font-size: 1.6rem;
-        line-height: 1.6;
-        margin-top: 1rem;
-        /* text-align: center; */
-        font-style: italic;
-        animation: fadeInText 1.5s ease-out 1.8s forwards;
-      }
-      .new {
-        width: 60%;
-        margin-left: 23%;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-          sans-serif;
-      }
-
-      body {
-        min-height: 100vh;
-        background: #0a0014;
-        padding: 2rem;
-        color: white;
-      }
-
-      h1 {
-        font-size: 3rem;
-        margin-bottom: 2rem;
-        padding-left: 1rem;
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        margin-top: 1.5%;
-      }
-
-      .card {
-        background: linear-gradient(
-          135deg,
-          rgba(74, 18, 120, 0.4) 0%,
-          rgba(44, 10, 71, 0.4) 100%
-        );
-        border-radius: 24px;
-        padding: 2rem;
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border-radius: 24px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        pointer-events: none;
-      }
-
-      .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        background: linear-gradient(
-          135deg,
-          rgba(94, 28, 150, 0.4) 0%,
-          rgba(64, 20, 101, 0.4) 100%
-        );
-      }
-
-      .icon {
-        width: 90px;
-        height: 90px;
-        background: linear-gradient(135deg, #6e35c0 0%, #5829a7 100%);
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        animation: float 3s ease-in-out infinite;
-      }
-
-      .content {
-        flex: 1;
-      }
-
-      .content h2 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-        color: white;
-      }
-
-      .content p {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-        line-height: 1.4;
-      }
-
-      .learn-more {
-        background: rgba(255, 255, 255, 0.1);
-        color: white;
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 50px;
-        font-size: 0.8rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-
-      .learn-more:hover {
-        background: rgba(255, 255, 255, 0.2);
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-      }
-
-      @media (max-width: 768px) {
-        .grid {
-          grid-template-columns: 1fr;
-        }
-
-        h1 {
-          font-size: 2rem;
-          text-align: center;
-        }
-      }
-      @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:400,700&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.contact {
-  font-family: system-ui, -apple-system, sans-serif;;
-  display: flex;
-  flex-direction: column; 
-  position: relative;
-  background: transparent;
-  background-size: cover;
-}
-
-.contact-header {
-  font-family: system-ui, -apple-system, sans-serif;
-  margin: 10rem 10rem 3rem 10rem;
-  text-align: center;
-}
-
-#co-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: white;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-#co-text {
-  font-size: 3rem;
-  color: white;
-  padding-bottom: 2rem;
-}
-
-.contact-content {
-  font-family: system-ui, -apple-system, sans-serif;;
-  display: flex;
-  justify-content: space-between;
-  align-self: center;
-  line-height: 2;
-  height: auto;
-  width: 70%;
-  background-color: transparent;
-  margin-bottom: 10rem;
-}
-
-.contact-form {
-  font-family: system-ui, -apple-system, sans-serif;
-  padding: 5rem;
-}
-
-#form-title {
-  color: #fff;
-  font-size: 0.6rem;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  line-height: 1px;
-  margin-left: 4rem;
-  margin-bottom: 3rem;
-}
-
-fieldset {
-  border: none;
-}
-
-.form-field {
-  outline: none;
-  width: 200%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
-    margin-bottom: .9rem;
-}
-
-#name, #email, #subject, #message {
-  font-family: system-ui, -apple-system, sans-serif;
-  color: #fff;
-  outline: none;
-  background: transparent;
-  border: none;
-  letter-spacing: 2px;
-  font-size: .6rem;
-  line-height: 2rem;
-  padding-bottom: 0.7rem;
-}
-
-textarea, #message {
-  width: 100%;
-  color: #fff;
-  overflow: visible;
-}
-
-#form-btn {
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem;
-  border: none;
-  color: white;
-  font-size: 0.6rem;
-  letter-spacing: 2.5px;
-  font-weight: 700;
-  text-transform: uppercase;
-  width: 200%;
-  height: 60px;
-  background-color: #a855f7;
-  cursor: pointer;
-  transition: all .3s ease;
-}
-
-#form-btn:hover {
-  opacity: 0.9;
-  transform: translateY(-2.5%);
-  box-shadow: 0 0 15px 0 #000;
-}
-
-.contact-info {
-  font-family: system-ui, -apple-system, sans-serif;;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 5rem;
-  background-color: rgba(0,0,0,0.3);
-}
-
-.contact-info h3 {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 1rem;
-  color: #a855f7;
-}
-
-.contact-info a {
-  font-family: system-ui, -apple-system, sans-serif;
-  text-decoration: none;
-  color: white;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  line-height: 3rem;
-  margin-bottom: 5rem;
-  transition: all .3s ease;
-}
-
-.contact-info a:hover {
-  transform: translateY(-2.5%);
-  color: white;
-}
-
-.contact-info .fab {
-  font-size: 1.5rem;
-  line-height: 3rem;
-  padding-left: 2rem;
-  color: white;
-  cursor: pointer;
-  transition: all .3s ease;
-}
-
-.fab:hover{
-  transform: scale(1.2);
-  color: white;
-}
-.contact-links a {
-  color: white; 
-  font-size: 24px;
-  margin-right: 10px; 
-  transition: color 0.3s ease-in-out;
-}
-
-.contact-links a:hover {
-  color: #ccc;
-}
-
-@media screen and (max-width: 960px) {
-  .contact-content {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-field {
-    width: 100%;
-  }
-  
-  #form-btn {
-    width: 100%;
-  }
-  
-  #form-title {
-    margin: 3rem auto;
-  }
-  
-  .contact-header{
-    margin: 5rem 5rem 3rem 5rem;
-  }
-  
-  #co-title {
-    font-size: 1rem;
-  }
-  
-  #co-text {
-    font-size: 2.5rem;
-  }
-  
-  .contact-form {
-    padding: 2.5rem;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .form-field {
-    width: 125%;
-  }
-  
-  #form-title {
-    margin: 3rem auto;
-  }
-  
-  #form-btn {
-    width: 125%;
-  }
-  
-  .contact-header{
-    margin: 7rem 7rem 3rem 7rem;
-  }
-  
-  .contact-info {
-    padding: 5rem;
-  }
-  
-  #co-title {
-    font-size: 1rem;
-  }
-  
-  #co-text {
-    font-size: 2.5rem;
-  }
-  
-  .contact-form {
-    padding: 2.5rem;
-  }
-}
-
-@media screen and (min-width: 1460px) {
-  .form-field {
-    width: 200%;
-  }
-  
-  #form-btn {
-    width: 200%;
-  }
-}
-    </style>
   </head>
   <body>
     <nav>
@@ -584,7 +18,8 @@ textarea, #message {
       </div>
     </nav>
 
-    <main class="hero">
+    <!-- Home Section -->
+    <main class="hero" id="home">
       <div class="hero-image">
         <div class="hello-text">Hello! I Am Vouchh</div>
         <img src="./images/v104_6.png" alt="Developer Avatar" />
@@ -600,7 +35,6 @@ textarea, #message {
         </p>
       </div>
     </main>
-
     <section class="new">
       <h2 class="aspiring-dev">I'm an Aspiring Developer...</h2>
       <p class="description">
@@ -610,17 +44,40 @@ textarea, #message {
       </p>
     </section>
 
+    <!-- About Section -->
+    <div class="about-container">
+    <div class="about-content">
+      <div class="content-wrapper floating">
+          <p class="subtitle">A little about me</p>
+          <h1 class="title">About Me</h1>
+          <p class="description">
+              Hi! I'm Vouchheang, and I am studying Web and Mobile App Development at SOB in PSE Institute. I started my journey in 2023, first learning design coding and then moving into development. Coding allows me to be creative while also solving problems. I enjoy building apps that make technology easier to use and improve people's experiences.
+          </p>
+          <div class="icons">
+              <div class="icon">✦</div>
+              <div class="icon">✧</div>
+          </div>
+      </div>
+  </div>
+  <div class="image-container">
+      <img src="./images/aboutme1.png" alt="Design mockup" class="mockup-image floating">
+  </div>
+</div>
+    <!-- Project Section -->
+    <div id="project"></div>
     <h1 style="margin-top: 7%; text-align: center">Projects</h1>
     <div class="grid">
       <div class="card">
         <div class="icon">⭐</div>
         <div class="content">
-          <h2>CIB on the Mobile</h2>
+          <h2>Certificates generation</h2>
           <p>
-            Take your client onboard seamlessly by our amazing tool of digital
-            onboard process.
+            I interned for 5 weeks at Sala.tech Company (Only front-end),
+            working on a website for generating certificates.
           </p>
-          <button class="learn-more">LEARN MORE</button>
+          <a href="https://certificates-rho.vercel.app/" target="_blank"
+            ><button class="learn-more">SEE WEBSITE</button></a
+          >
         </div>
       </div>
       <div class="card">
@@ -635,10 +92,9 @@ textarea, #message {
         </div>
       </div>
     </div>
-    
     <div class="grid">
       <div class="card">
-        <div class="icon">⭐</div>
+        <div class="icon">🍄</div>
         <div class="content">
           <h2>CIB on the Mobile</h2>
           <p>
@@ -649,7 +105,7 @@ textarea, #message {
         </div>
       </div>
       <div class="card">
-        <div class="icon">💡</div>
+        <div class="icon">🌱</div>
         <div class="content">
           <h2>CIB on the Mobile</h2>
           <p>
@@ -661,9 +117,9 @@ textarea, #message {
       </div>
     </div>
 
-    <div class="grid">
+    <div class="grid" style="margin-bottom: 8%">
       <div class="card">
-        <div class="icon">⭐</div>
+        <div class="icon">🐹</div>
         <div class="content">
           <h2>CIB on the Mobile</h2>
           <p>
@@ -674,7 +130,7 @@ textarea, #message {
         </div>
       </div>
       <div class="card">
-        <div class="icon">💡</div>
+        <div class="icon">💖</div>
         <div class="content">
           <h2>CIB on the Mobile</h2>
           <p>
@@ -682,12 +138,170 @@ textarea, #message {
             onboard process.
           </p>
           <button class="learn-more">LEARN MORE</button>
+        </div>
+        <div id="skills"></div>
+      </div>
+    </div>
+
+
+
+    <!-- Skills Section  -->
+    <div class="banner">
+      <div class="banner-text">
+        I'm currently looking to join a team<br />
+        that improves people's lives by building strong and efficient backend
+        systems.
+      </div>
+      <div class="tech-icons">
+        <div class="row">
+          <div class="icon-wrapper">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              alt="HTML5"
+              class="icon"
+            />
+          </div>
+          <div class="icon-wrapper">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+              alt="CSS3"
+              class="icon"
+            />
+          </div>
+          <div class="icon-wrapper">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript"
+              class="icon"
+            />
+          </div>
+          <div class="icon-wrapper">
+            <img src="./images/tailwind.png" alt="Tailwind" class="icon" />
+          </div>
+          <div class="icon-wrapper">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              alt="React"
+              class="icon"
+            />
+          </div>
+          <div class="icon-wrapper">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+              alt="GitHub"
+              class="icon white-icon"
+            />
+          </div>
+          <div class="icon-wrapper">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+              alt="Docker"
+              class="icon"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="icon-wrapper">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+              alt="Node.js"
+              class="icon"
+            />
+          </div>
+          <div class="icon-wrapper">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+              alt="Next.js"
+              class="icon"
+            />
+          </div>
+          <div class="icon-wrapper">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+              alt="PostgreSQL"
+              class="icon"
+            />
+          </div>
+          <div class="icon-wrapper">
+            <img src="./images/mysql.png" alt="GraphQL" class="icon" />
+          </div>
+          <div class="icon-wrapper">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+              alt="Express"
+              class="icon white-icon"
+            />
+          </div>
+          <div class="icon-wrapper">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+              alt="MongoDB"
+              class="icon"
+            />
+          </div>
         </div>
       </div>
     </div>
-<!-- Contact Section -->
 
-<section class="contact">
+    <!-- <div class="skill-container">
+      <div class="glow"></div>
+      <div class="orbit orbit-1">
+        <div class="tech-icon" style="top: 0; left: 50%; opacity: 40%">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+            alt="MongoDB"
+            class="icon"
+          />
+        </div>
+        <div class="tech-icon" style="bottom: 0; left: 50%; opacity: 40%">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+            alt="Express"
+            class="icon white-icon"
+          />
+        </div>
+      </div>
+      <div class="orbit orbit-2">
+        <div class="tech-icon" style="top: 20%; right: 10%; opacity: 40%">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+            alt="Docker"
+            class="icon"
+          />
+        </div>
+        <div class="tech-icon" style="bottom: 20%; left: 10%; opacity: 40%">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+            alt="React"
+            class="icon"
+          />
+        </div>
+      </div>
+      <div class="orbit orbit-3">
+        <div class="tech-icon" style="top: 40%; right: 5%; opacity: 40%">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+            alt="Node.js"
+            class="icon"
+          />
+        </div>
+        <div class="tech-icon" style="bottom: 40%; left: 5%; opacity: 40%">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+            alt="GitHub"
+            class="icon white-icon"
+          />
+        </div>
+      </div>
+
+   
+
+      <div class="v">V</div>
+    </div> -->
+
+    <!-- Contact Section -->
+
+    <!-- <section class="contact">
   <div class="contact-header">
     <h3 id="co-title">Contact Me</h3>
     <h1 id="co-text">Reach out for a new project or to say hello</h1>
@@ -725,10 +339,79 @@ textarea, #message {
       </div>
     </div>
     </div>
-</section>
-    
+</section> -->
 
-
-    
+    <div class="footer-container">
+      <h1>Get in Touch</h1>
+      <p>
+        I'd love to hear from you! Whether you have a project in mind or just
+        want to connect, <br />
+        feel free to reach out.
+      </p>
+      <div class="buttons">
+        <a href="./images/Mom Vouchheang C3-WMAD CV 2025.pdf" target="_blank" class="btn">My CV</a>
+        <a href="#" class="btn">Let's talk</a>
+      </div>
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+            ></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a href="#" aria-label="Google">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"
+            />
+          </svg>
+        </a>
+        <a href="#" aria-label="GitHub">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
   </body>
+  <script src="./script.js"></script>
 </html>
