@@ -9,12 +9,15 @@
   <body>
     <nav>
       <div class="logo">Vouchh.</div>
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#project">Project</a>
-        <a href="#contact">Contact</a>
+      <div class="nav-container">
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#project">Project</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
       </div>
     </nav>
 
@@ -22,7 +25,11 @@
     <main class="hero" id="home">
       <div class="hero-image">
         <div class="hello-text">Hello! I Am Vouchh</div>
-        <img src="./images/v104_6.png" alt="Developer Avatar" />
+        <img
+          src="./images/it.png"
+          alt="Developer Avatar"
+          style="width: 400px"
+        />
       </div>
       <div class="hero-content">
         <p class="developer-intro">A Developer who</p>
@@ -36,67 +43,53 @@
       </div>
     </main>
     <section class="new">
-      <h2 class="aspiring-dev">I'm an Aspiring Developer...</h2>
+      <h2 class="aspiring-dev">I'm a Junior Developer...</h2>
+      <div id="about"></div>
       <p class="description1">
-        I am a highly passionate and dedicated developer, committed to
-        delivering exceptional results. If you have an exciting project that
-        requires top-tier skills, I would be a valuable addition to your team.
+        I am a highly passionate and dedicated developer, eager to learn and
+        grow while delivering quality results. If you have an exciting project
+        that requires fresh talent and enthusiasm, I would be a valuable
+        addition to your team.
       </p>
     </section>
 
     <!-- About Section -->
     <div class="about-container">
       <div class="about-content">
-        <div class="content-wrapper floating">
-          <div class="text-container">
-            <p class="subtitle">A little about me</p>
-            <h1 class="title">About Me</h1>
-            <p class="description">
-              Hi! I'm Vouchheang, and I am studying Web and Mobile App
-              Development at SOB in PSE Institute. I started my journey in 2023,
-              first learning design coding and then moving into development.
-              Coding allows me to be creative while also solving problems. I
-              enjoy building apps that make technology easier to use and improve
-              people's experiences.
-            </p>
-            <div class="icons">
-              <div class="icon">✦</div>
-              <div class="icon">✧</div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img
-              src="./images/aboutme1.png"
-              alt="Design mockup"
-              class="mockup-image"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="content-wrapper floating">
-        <div class="text-container">
-          <p class="subtitle">A little about me</p>
-          <h1 class="title">About Me</h1>
+        <!-- Left Column -->
+        <div class="content-wrapper">
+          <div class="subtitle">A little about me</div>
+          <div class="title">About Me</div>
           <p class="description">
             Hi! I'm Vouchheang, and I am studying Web and Mobile App Development
             at SOB in PSE Institute. I started my journey in 2023, first
             learning design coding and then moving into development. Coding
-            allows me to be creative while also solving problems. I enjoy
-            building apps that make technology easier to use and improve
-            people's experiences.
+            allows me to be creative while also solving problems. Over the past
+            two years, I've completed 15+ projects, pushing my skills and
+            creativity to new heights!
           </p>
           <div class="icons">
             <div class="icon">✦</div>
             <div class="icon">✧</div>
           </div>
         </div>
-        <div class="image-container">
-          <img
-            src="./images/aboutme1.png"
-            alt="Design mockup"
-            class="mockup-image"
-          />
+
+        <!-- Right Column -->
+        <div class="content-wrapper">
+          <div class="subtitle">A little about me</div>
+          <div class="title">What Drives Me</div>
+          <p class="description">
+            Outside of coding, I have many interests. I have many interests. I
+            love melancholic music and enjoy getting lost in fictional and
+            mystery books, art, and playing badminton. I am also very curious
+            and enjoy analyzing problems to find good solutions. I am a hard
+            worker who doesn’t give up easily. Whether in coding or my hobbies,
+            I always try to learn and improve.
+          </p>
+          <div class="icons">
+            <div class="icon">✦</div>
+            <div class="icon">✧</div>
+          </div>
         </div>
       </div>
     </div>
@@ -121,64 +114,80 @@
       <div class="card">
         <div class="icon">💡</div>
         <div class="content">
-          <h2>CIB on the Mobile</h2>
+          <h2>Smart Calculator</h2>
           <p>
-            Take your client onboard seamlessly by our amazing tool of digital
-            onboard process.
+            I built a simple calculator during a hackathon, focusing on clean
+            design calculations. This project helped me improve problem-solving
+            and front-end development skills.
           </p>
-          <button class="learn-more">LEARN MORE</button>
+          <a href="https://hackathon-e8vy.vercel.app/" target="_blank"
+            ><button class="learn-more">SEE WEBSITE</button></a
+          >
         </div>
       </div>
     </div>
     <div class="grid">
       <div class="card">
-        <div class="icon">🍄</div>
+        <div class="icon">💡</div>
         <div class="content">
-          <h2>CIB on the Mobile</h2>
+          <h2>Selling Bicycle Website</h2>
           <p>
-            Take your client onboard seamlessly by our amazing tool of digital
-            onboard process.
+            This is my third project from my first year, focused on improving my
+            front-end skills. It helping me learn how to fetch and display
+            dynamic data efficiently.
           </p>
-          <button class="learn-more">LEARN MORE</button>
+          <a
+            href="https://limsopheak16.github.io/Selling-Bicycle/"
+            target="_blank"
+            ><button class="learn-more">SEE WEBSITE</button></a
+          >
         </div>
       </div>
       <div class="card">
-        <div class="icon">🌱</div>
+        <div class="icon">⭐</div>
         <div class="content">
-          <h2>CIB on the Mobile</h2>
+          <h2>Weather Forecast</h2>
           <p>
-            Take your client onboard seamlessly by our amazing tool of digital
-            onboard process.
+            A dynamic weather app that provides real-time forecasts but it
+            doesn't have responsive. Built to enhance API integration skills.
           </p>
-          <button class="learn-more">LEARN MORE</button>
+          <a href="https://pp-weather-azure.vercel.app/" target="_blank">
+            <button class="learn-more">SEE WEBSITE</button></a
+          >
         </div>
       </div>
     </div>
-
     <div class="grid" style="margin-bottom: 8%">
       <div class="card">
-        <div class="icon">🐹</div>
+        <div class="icon">⭐</div>
         <div class="content">
-          <h2>CIB on the Mobile</h2>
+          <h2>Minimal Blog</h2>
           <p>
-            Take your client onboard seamlessly by our amazing tool of digital
-            onboard process.
+            This is my Minima Blog project, which I worked on in my first year.
+            The project helped me better understand how to structure a blog and
+            efficiently fetch and display dynamic route & content based on user
+            interaction.
           </p>
-          <button class="learn-more">LEARN MORE</button>
+          <a href="https://minimal-blog-beryl.vercel.app/" target="_blank"
+            ><button class="learn-more">SEE WEBSITE</button></a
+          >
         </div>
       </div>
       <div class="card">
-        <div class="icon">💖</div>
+        <div class="icon">💡</div>
         <div class="content">
-          <h2>CIB on the Mobile</h2>
+          <h2>Blog Post</h2>
           <p>
-            Take your client onboard seamlessly by our amazing tool of digital
-            onboard process.
+            This blog post website was a 1-week hackathon project with a team of
+            two. We focused on design and dynamic content, which helped me
+            improve my teamwork and coding skills under tight deadlines.
           </p>
-          <button class="learn-more">LEARN MORE</button>
+          <a href="https://blogpost-one-rho.vercel.app/" target="_blank"
+            ><button class="learn-more">SEE WEBSITE</button></a
+          >
         </div>
-        <div id="skills"></div>
       </div>
+      <div id="skills"></div>
     </div>
 
     <!-- Skills Section  -->
@@ -297,7 +306,8 @@
       </div>
     </div>
 
-    <div class="footer-container">
+    <!-- Contact Section -->
+    <div class="footer-container" id="contact">
       <h1>Get in Touch</h1>
       <p>
         I'd love to hear from you! Whether you have a project in mind or just
@@ -307,14 +317,17 @@
       <div class="buttons">
         <a
           href="./images/Mom Vouchheang C3-WMAD CV 2025.pdf"
-          target="_blank"
+          download="./images/Mom Vouchheang C3-WMAD CV 2025.pdf"
           class="btn"
           >My CV</a
         >
-        <a href="#" class="btn">Let's talk</a>
+        <a href="./contact.html" target="_blank" class="btn">Let's talk</a>
       </div>
       <div class="social-icons">
-        <a href="#" aria-label="Instagram">
+        <a
+          href="https://www.instagram.com/vouchhhhhhh?igsh=cnpieWg1ZHJ4aHY0"
+          aria-label="Instagram"
+        >
           <svg
             width="24"
             height="24"
@@ -330,7 +343,11 @@
             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
           </svg>
         </a>
-        <a href="#" aria-label="LinkedIn">
+        <a
+          href="https://www.linkedin.com/in/vouchheang-mom-87227134b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          aria-label="LinkedIn"
+          target="_blank"
+        >
           <svg
             width="24"
             height="24"
@@ -348,14 +365,18 @@
             <circle cx="4" cy="4" r="2"></circle>
           </svg>
         </a>
-        <a href="#" aria-label="Google">
+        <a href="mailto:vouchh02@gmail.com" aria-label="Google">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
             <path
               d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"
             />
           </svg>
         </a>
-        <a href="#" aria-label="GitHub">
+        <a
+          href="https://github.com/vouchheang"
+          aria-label="GitHub"
+          target="_blank"
+        >
           <svg
             width="24"
             height="24"
